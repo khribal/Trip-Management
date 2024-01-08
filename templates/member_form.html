@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1>Add a New Member</h1>
+    <form method="POST" name="dino_quiz">
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Name:</th>
+                        <td><input class="form-control" type="text" name="name" id="name" size="40"></td>
+                    </tr>
+                    <tr>
+                        <th>Address:</th>
+                        <td><input class="form-control" type="text" name="address" id="address" size="80"></td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td><input class="form-control" type="text" name="email" id="email" size="80"></td>
+                    </tr>
+                    <tr>
+                        <th>Phone:</th>
+                        <td><input class="form-control" type="text" name="phone" id="phone" size="80"></td>
+                    </tr>
+                    <tr>
+                        <th>DOB:</th>
+                        <td><input class="form-control" type="date" name="dob" id="dob" size="40"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <a href="{{url_for('add_member')}}"><button type="save" value="Save" class="btn btn-primary">Save</button></a>
+                <a href="{{url_for('add_member')}}"><button type="reset" value="Reset" class="btn btn-secondary">Reset</button></a>
+            </div>
+    </form>
+</div>
+{% endblock %}

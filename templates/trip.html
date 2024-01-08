@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-primary">{{trip['name']}}</h1>
+        <table class="table">
+                <tr>
+                    <th>Start Date:</th>
+                    <td>{{trip['start_date']}}</td>
+                </tr>
+                <tr>
+                    <th>Trip Length:</th>
+                    <td>{{trip['length']}}</td>
+                </tr>
+                <tr>
+                    <th>Activity Level:</th>
+                    <td>{{trip['level']}}</td>
+                </tr>
+                <tr>
+                    <th>Location:</th>
+                    <td>{{trip['location']}}</td>
+                </tr>
+                <tr>
+                    <th>Cost:</th>
+                    <td>{{trip['cost']}}</td>
+                </tr>
+                <tr>
+                    <th>Trip Leader:</th>
+                    <td>{{trip['leader']}}</td>
+                </tr>
+                <tr>
+                    <th>Description:</th>
+                    <td>{{trip['description']}}</td>
+                </tr>
+        </table>
+        <a href="{{url_for('edit', trip_id=trip_id)}}"><button type="button" class="btn btn-primary">Edit trip</button></a>
+        <a href=""><button type="button" class="btn btn-danger">Delete this trip</button></a>
+    </div>
+
+{% endblock %}
